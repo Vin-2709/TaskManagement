@@ -97,6 +97,8 @@
 // }
 
 // export default App
+
+//this is a check to git
 import React, { useContext, useEffect, useState } from 'react';
 import Login from './components/Auth/Login'; // Correct import name capitalization
 import EmployeeDashboard from './components/dashboard/EmployeeDashboard';
