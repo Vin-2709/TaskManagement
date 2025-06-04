@@ -19,7 +19,7 @@ const Dashboard = () => {
     const fetchData = async () => {
         try {
 
-            const response = await axios.get(`http://localhost:5000/admin/${id}`);
+            const response = await axios.get(`https://task-management-theta-pied.vercel.app/admin/${id}`);
             if (response.data.success) {
                 setAdmin(response.data.user);
                 setTasks(response.data.tasks);
@@ -33,7 +33,7 @@ const Dashboard = () => {
 
 
 const deletetask = async (id) => {
-    const response = await axios.get(`http://localhost:5000/delete/${id}`);
+    const response = await axios.get(`https://task-management-theta-pied.vercel.app/delete/${id}`);
     console.log(response);
 
     if (response.data.success) {
