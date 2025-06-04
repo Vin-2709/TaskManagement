@@ -22,7 +22,7 @@ const Create = () => {
     const submitHandler=async(e)=>{
         try {
              e.preventDefault();
-        const response=await axios.post(`http://localhost:5000/admin/${id}/assigntask`,{ 
+        const response=await axios.post(`https://task-management-theta-pied.vercel.app/admin/${id}/assigntask`,{ 
            name,
            email,
            domain,
