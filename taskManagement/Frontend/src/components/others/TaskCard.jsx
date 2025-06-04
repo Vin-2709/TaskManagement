@@ -104,7 +104,7 @@ const TaskCard= ({data,onstatusUpdate})=>{
          }
          
         
-         const response=await axios.post(`http://localhost:5000/taskstatusupdate/${data._id}`,{
+         const response=await axios.post(`https://task-management-theta-pied.vercel.app//taskstatusupdate/${data._id}`,{
             Status:newStatus,
          });
          console.log(response);
