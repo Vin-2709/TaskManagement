@@ -29,7 +29,7 @@ const Edittask=()=>{
     const gettask=async()=>{
        
         try {
-            const response = await axios.get(`http://localhost:5000/task/${id}`);
+            const response = await axios.get(`https://task-management-theta-pied.vercel.app//task/${id}`);
             if (response.data.success) {
                 const taskdata = response.data.task;
                 setFormdata({
@@ -64,7 +64,7 @@ const Edittask=()=>{
     const submitHandler=async(e)=>{
         e.preventDefault();
         try {
-            const response=await axios.put(`http://localhost:5000/edit-task/${id}`,{ 
+            const response=await axios.put(`https://task-management-theta-pied.vercel.app//edit-task/${id}`,{ 
                 domain:formdata.domain,
                 deadline:formdata.deadline,
                 description:formdata.description
