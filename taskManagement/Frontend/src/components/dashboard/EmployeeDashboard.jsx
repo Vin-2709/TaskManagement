@@ -140,7 +140,7 @@ const EmployeeDashboard = ({changeUser,userdata}) => {
     
     const getUser = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/employee/${id}`);
+        const res = await axios.get(`https://task-management-theta-pied.vercel.app/employee/${id}`);
         setUser(res.data.user);
         changeUser(res.data.user); 
       } catch (err) {
@@ -149,7 +149,7 @@ const EmployeeDashboard = ({changeUser,userdata}) => {
     };
    
     const getTask= async()=>{
-    const response= await axios.get(`http://localhost:5000/gettask/${id}`);
+    const response= await axios.get(`https://task-management-theta-pied.vercel.app/gettask/${id}`);
     console.log(response);
     setTasks(response.data.tasks);
    }
@@ -161,7 +161,7 @@ const EmployeeDashboard = ({changeUser,userdata}) => {
           const deadline=new Date(task.deadline);
           deadline.setHours(0,0,0,0);
           if(deadline<today && task.status !=="Completed" && task.status !="Failed"){
-            await axios.post(`http://localhost:5000/taskstatusupdate/${task._id}`, {Status:"Failed"});
+            await axios.post(`https://task-management-theta-pied.vercel.app/taskstatusupdate/${task._id}`, {Status:"Failed"});
           }
         });
       }
