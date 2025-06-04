@@ -11,7 +11,7 @@ const Header = ({changeUser,name}) => {
   const navigate=useNavigate();
   const logOutUser = async() => {
   changeUser(null);
-  await axios.get(`http://localhost:5000/logout/${id}/`);
+  await axios.get(`https://task-management-theta-pied.vercel.app/logout/${id}/`);
   navigate('/home');
   }
 
